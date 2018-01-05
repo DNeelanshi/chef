@@ -1,0 +1,227 @@
+<ion-header>
+
+  <ion-navbar color="theme-header">
+    <ion-title>Order List
+<p class="aaa">Online chef List</p></ion-title>
+  </ion-navbar>
+<div class="segment-sec">
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="pet">
+    <ion-segment-button class="segment-button segment-activated" value="ACTIVEORDER">
+      NEW ORDER
+    </ion-segment-button>
+    <ion-segment-button value="PENDING ORDER">
+      PENDING ORDER
+    </ion-segment-button>
+    <ion-segment-button value="ORDER HISTORY">
+     ORDER HISTORY
+    </ion-segment-button>
+  </ion-segment>
+  </ion-toolbar>
+</div>
+
+</ion-header>
+
+
+<ion-content>
+<div class="">
+  
+</div>
+
+<div [ngSwitch]="pet" class="box">
+  <ion-list *ngSwitchCase="'PENDING ORDER'">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+         <img src="assets/image/img1.png">
+
+      </ion-thumbnail>
+     <h2>User name <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+  
+  </ion-list>
+
+
+
+  
+
+  <ion-list *ngSwitchCase="'ACTIVEORDER'">
+    <ion-item (click)="order()">
+      <ion-thumbnail item-start>
+        <img src="assets/image/img1.png">
+      </ion-thumbnail>
+      <h2>User name <span class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+  
+  </ion-list>
+   <ion-list *ngSwitchCase="'ACTIVEORDER'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/image/img2.png">
+      </ion-thumbnail>
+      <h2>User name<span class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+   
+    </ion-item>
+  
+  </ion-list>
+
+ <ion-list *ngSwitchCase="'ACTIVEORDER'">
+   <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/image/img3.png">
+      </ion-thumbnail>
+      <h2>User name <span class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+  
+  </ion-list>
+
+ <ion-list *ngSwitchCase="'ACTIVEORDER'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/image/img4.png">
+      </ion-thumbnail>
+      <h2>User name <span class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+   
+    </ion-item>
+  
+  </ion-list>
+
+
+
+ <ion-list *ngSwitchCase="'ACTIVEORDER'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/image/img5.png">
+      </ion-thumbnail>
+      <h2>User name<span class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    </ion-item>
+  
+  </ion-list>
+
+  <div *ngSwitchCase="'ORDER HISTORY'">
+   <ion-list >
+     <h1 class="cancel">TOATAL EARNED <span  style="color:black; font-weight: 700;" class="rightp">$ 2000.00</span></h1>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/image/img1.png">
+      </ion-thumbnail>
+      <h2>Luna <span class="rightp">Home Delivery</span></h2>
+       <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+  
+    </ion-item>
+
+  
+    <ion-item>
+       <ion-thumbnail item-start>
+        <img src="assets/image/img2.png">
+      </ion-thumbnail>
+      <h2>User name <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+   </ion-list>
+   <h1 class="cancel">CANCELLED ORDER</h1>
+   <ion-list>
+    <ion-item>
+       <ion-thumbnail item-start>
+        <img src="assets/image/img5.png">
+      </ion-thumbnail>
+      <h2>User name <span style="color:red;" class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+   
+    </ion-item>
+  
+    <ion-item>
+       <ion-thumbnail item-start>
+        <img src="assets/image/img4.png">
+      </ion-thumbnail>
+      <h2>User name <span style="color:red;" class="rightp">Cook at Home</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+
+    </ion-item>
+  </ion-list>
+  </div>
+
+
+    <ion-list *ngSwitchCase="'PENDING ORDER'">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+         <img src="assets/image/img2.png">
+
+      </ion-thumbnail>
+     <h2>User name  <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+  
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'PENDING ORDER'">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+         <img src="assets/image/img3.png">
+
+      </ion-thumbnail>
+     <h2>User name  <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'PENDING ORDER'">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+         <img src="assets/image/img4.png">
+
+      </ion-thumbnail>
+     <h2>User name  <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+    
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'PENDING ORDER'">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+         <img src="assets/image/img5.png">
+
+      </ion-thumbnail>
+     <h2>User name <span class="rightp">Home Delivery</span></h2>
+    <p>Idli, sambhar, Kerla</p>
+     <p>19 august 2017 20:12am</p>
+   
+    </ion-item>
+  
+  </ion-list>
+
+
+</div>
+</ion-content>

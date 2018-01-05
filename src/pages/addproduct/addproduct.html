@@ -1,0 +1,346 @@
+<!--
+  Generated template for the AddproductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="theme-header">
+     
+      <button ion-button start style="height: 28px;    color: #fff;    padding: 0 0 0 3px;    font-size: 12px;
+    float: left;    width: 7%; margin: 0;" start ion-button clear (click)="backtopro()"><ion-icon ios="ios-arrow-back" md="md-arrow-back" style="font-size: 2.2em;"></ion-icon></button>
+     
+    <ion-title>Add Product</ion-title>
+
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+    <div class="content-text">
+  <h1>Add Product</h1>
+  </div>
+  <div class="content-sec">
+  <div class="sign">
+   <form class="form-sec" #productForm="ngForm" novalidate >
+    <ion-list>
+         <ion-grid>
+          <ion-row>
+            <ion-col col-12 class="left right">
+        <ion-item>
+          <ion-label stacked>PRODUCT NAME 1 </ion-label>
+          <ion-input type="text" [(ngModel)]="data.productname" required name='productname' #productname="ngModel" required></ion-input>
+        </ion-item>
+                <div class="alert alert-danger" color="danger">
+                  <div *ngIf="productname.errors && (productname.dirty || productname.touched)&& data.productname !=''">
+                    <div [hidden]="!productname.errors.required">
+                      Product name is required
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+
+           <ion-col col-6 class="left">
+        <ion-item>
+          <ion-label stacked>PRODUCT PRICE </ion-label>
+          <ion-input type="tel" [(ngModel)]="data.productprice" required name='productprice' #productprice="ngModel"  pattern="[0-9]+(\.[0-9][0-9]?)?"  required (input)="commisioncal()"></ion-input>
+        </ion-item>
+                <div class="alert alert-danger" color="danger">
+                  <div *ngIf="productprice.errors && (productprice.dirty || productprice.touched) && data.productprice !=''">
+                    <div [hidden]="!productprice.errors.required">
+                      Product price required
+                    </div>
+                    <div [hidden]="!productprice.errors.pattern">
+                      Only Number allowed with 2 decimal digits maximum
+                    </div>
+                        
+                  </div>
+                </div>
+      </ion-col>
+
+      <ion-col col-6 class="right">
+        <ion-item>
+          <ion-label stacked>RAFAHO PRICE</ion-label>
+             <ion-input type="text" [(ngModel)]="data.rafahoprice" required name='rafahoprice' #rafahoprice="ngModel" [readonly]="isReadonly()" required ></ion-input>
+        </ion-item>
+      </ion-col>
+      
+
+<ion-col col-12 class="left">
+        <ion-item>
+          <ion-label stacked>CHEF RECEIVED</ion-label>
+             <ion-input type="text" [(ngModel)]="data.chefrecieved" required name='chefrecieved' #chefrecieved="ngModel" [readonly]="isReadonly()" required ></ion-input>
+        </ion-item>
+      </ion-col>
+
+
+
+
+
+
+  <ion-col col-12 class="select left" >
+        
+        <ion-item>
+ <ion-label stacked class="why">DISCOUNT PRECENTAGE</ion-label>
+     <ion-select class="active"  [(ngModel)]="data.discount" name='discount' #discount="ngModel" required>
+    <ion-option value="10">10%</ion-option>
+    <ion-option value="20">20%</ion-option>
+      <ion-option value="30">30%</ion-option>
+        <ion-option value="40">40%</ion-option>
+          <ion-option value="50">50%</ion-option>
+
+  </ion-select>
+        </ion-item>
+      </ion-col>
+
+
+<div>
+  <h1 class="main">Main Dish and Accompainment</h1>
+</div>
+
+
+      <ion-col col-12 class="left right">
+<!--        <ion-item>
+          <ion-label stacked>PRODUCT INGREDIENTS</ion-label>
+          <ion-input type="text" [(ngModel)]="data.productingredients" required name='productingredients' #productingredients="ngModel" required></ion-input>
+        </ion-item>
+          <div class="alert alert-danger" color="danger">
+                  <div *ngIf="productingredients.errors && (productingredients.dirty || productingredients.touched) && data.productingredients !=''">
+                    <div [hidden]="!productingredients.errors.required">
+                      Product ingredients are required
+                    </div>
+                  </div>
+                </div>-->
+          <ion-label stacked style="margin-top: 17px;" >PRODUCT INGREDIENTS</ion-label>
+<div>
+      <ion-tags-input style="position:initial;" placeholder="+Ingredients" [(ngModel)]="tagss" [ngModelOptions]="{standalone: true}" (onChange)="onChanges($event)" required></ion-tags-input>
+<div class="alert alert-danger" color="danger">
+                  <div *ngIf="tagss.errors && (tagss.dirty || tagss.touched)" >
+                    <div [hidden]="!tagss.errors.required">
+                      Product Ingredients are required
+                    </div>
+                  </div>
+                </div>
+</div>
+      </ion-col>
+
+
+       <ion-col col-12 class="left right">
+        <ion-item>
+          <ion-label stacked>PRODUCT DESCRIPTION</ion-label>
+          <ion-input type="text" [(ngModel)]="data.productdesc" required name='productdesc' #productdesc="ngModel" maxlength="3000"  required></ion-input>
+        </ion-item>
+           <div class="alert alert-danger" color="danger">
+                  <div *ngIf="productdesc.errors && (productdesc.dirty || productdesc.touched)&& data.productdesc !=''" >
+                    <div [hidden]="!productdesc.errors.required">
+                      Product description is required
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+   <ion-col col-12 class="left right">
+        <ion-item>
+          <ion-label stacked>DIET RESTRICTION</ion-label>
+          <ion-input type="text" [(ngModel)]="data.diet" required name='diet' #diet="ngModel" maxlength="3000"  required></ion-input>
+        </ion-item>
+           <div class="alert alert-danger" color="danger">
+                  <div *ngIf="diet.errors && (diet.dirty || diet.touched)&& data.diet !=''" >
+                    <div [hidden]="!diet.errors.required">
+                    Diet Restriction is required
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+
+
+  <div class="maxium">
+<p style="text-align:right">Maximum 3000 letter.</p>
+  </div>
+               <ion-col col-12 class="left right">
+         
+        
+        <ion-label stacked style="margin-top: 17px;" >TAGS</ion-label>
+<div>
+      <ion-tags-input style="position:initial;" [(ngModel)]="tag" [ngModelOptions]="{standalone: true}" (onChange)="onChange($event)" required></ion-tags-input>
+</div>
+<!--            <div class="tag-container">
+    <span class="tag" *ngFor="let tag of tags">
+      {{ tag }}
+      <ion-icon name="close" (click)="deleteTag(tag)"></ion-icon>
+    </span>
+  </div>-->
+
+  
+          
+          <!--<tags-input formControlName="animals"></tags-input>-->
+          <!--<input name="hashtags" type="tags" pattern="^#" placeholder="#hashtags">-->
+          <!--<ion-textarea  type="text" name="tags-input" placeholder="e.g Paneer"> <span><ion-icon name="close">Paneer</ion-icon></span></ion-textarea>-->
+<!--          <ion-textarea placeholder="e.g Paneer" [(ngModel)]="data.tags | TagModel" required name='tags' #tags="ngModel">Paneer</ion-textarea>-->
+         
+
+          
+          
+      </ion-col>
+
+<ion-grid>
+  <ion-row>
+
+<ion-col col-12 class="left">
+        <ion-item>
+          <ion-label stacked>MINIMUM ORDER</ion-label>
+             <ion-input type="tel" [(ngModel)]="data.minorder" required name='minorder' #minorder="ngModel" pattern="^(0|[1-9][0-9]*)$" maxlength="4" required></ion-input>
+        </ion-item>
+     <div class="alert alert-danger" color="danger">
+                  <div *ngIf="minorder.errors && (minorder.dirty || minorder.touched) && data.minorder !=''">
+                    <div [hidden]="!minorder.errors.required">
+                      Minimum order required
+                    </div>
+                    <div [hidden]="!minorder.errors.pattern">
+                      Only number allowed
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+
+      
+
+
+
+
+     
+
+   <ion-col col-12 class="left">
+        <ion-item>
+          <ion-label stacked>COOKING TIME AT CHEF PLACE</ion-label>
+           <ion-datetime displayFormat="HH:mm:ss" pickerFormat="HH mm ss"  [(ngModel)]="data.cookingatchef" name="cookingatchef" #cookingatchef="ngModel"  required></ion-datetime>
+          <!--<ion-input type="tel" [(ngModel)]="data.cookingatclient" required name='cookingatclient' #cookingatclient="ngModel" pattern="^(0|[1-9][0-9]*)$" required></ion-input>-->
+        </ion-item>
+     <div class="alert alert-danger" color="danger">
+                  <div *ngIf="cookingatchef.errors && (cookingatchef.dirty || cookingatchef.touched)">
+                    <div [hidden]="!cookingatchef.errors.required">
+                      Cooking time at chef place required
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+
+
+
+
+
+          </ion-row>
+    </ion-grid>
+    </ion-list>
+ 
+
+<!--   <div class="latter">
+<p>AFTER SELECT PREPARATION</p>
+  </div>-->
+
+    
+<ion-col col-12 class="left right">
+        <ion-item>
+          <ion-label stacked>COOKING TIME AT CLIENT PLACE</ion-label>
+           <ion-datetime displayFormat="HH:mm:ss" pickerFormat="HH mm ss"  [(ngModel)]="data.cookingatclient" name="cookingatclient" #cookingatclient="ngModel"  required></ion-datetime>
+          <!--<ion-input type="tel" [(ngModel)]="data.cookingatclient" required name='cookingatclient' #cookingatclient="ngModel" pattern="^(0|[1-9][0-9]*)$" required></ion-input>-->
+        </ion-item>
+     <div class="alert alert-danger" color="danger">
+                  <div *ngIf="cookingatclient.errors && (cookingatclient.dirty || cookingatclient.touched)">
+                    <div [hidden]="!cookingatclient.errors.required">
+                      Cooking time at client place required
+                    </div>
+                  </div>
+                </div>
+      </ion-col>
+
+<!--      <ion-col col-12 class="left right">
+        <ion-item>
+          <ion-label stacked style="margin-top: 17px;">TAGS</ion-label>
+          <ion-textarea placeholder="e.g Paneer" [(ngModel)]="data.tags" required name='tags' #tags="ngModel">Paneer</ion-textarea>
+          <span><ion-icon name="close">Paneer</ion-icon></span>
+
+          
+          
+        </ion-item>
+      </ion-col>-->
+
+
+<!--       <ion-col col-12 class="select">
+         <ion-label stacked class="why">STATUS</ion-label>
+        <ion-item>
+
+     <ion-select class="active" >
+    <ion-option value="Active">Active</ion-option>
+    <ion-option value="Deactive">Deactive</ion-option>
+
+  </ion-select>
+        </ion-item>
+      </ion-col>-->
+
+
+
+<div class="add">
+  <h2 >ADD PRODUCT IMAGE <span style="font-size: 9px;">Maximum 3 Photos</span></h2>
+<ion-grid style="padding:0;">
+  <ion-row>
+    <ion-col col-3 style="padding-left:0px;">
+      <div class="image">
+      <img *ngIf="srcImage" class="pick0" [src]="srcImage" >
+ <img *ngIf="!srcImage" class="pick0" src="assets/image/profile_img.png">
+      </div>
+      </ion-col>
+
+
+      <ion-col col-3 style="padding-left:0px;">
+      <div class="image">
+   <img *ngIf="srcImage1" class="pick0" [src]="srcImage1" >
+ <img *ngIf="!srcImage1" class="pick0" src="assets/image/profile_img.png">
+      </div>
+      </ion-col>
+
+
+      <ion-col col-3 style="padding-left:0px;">
+      <div class="image">
+      <img *ngIf="srcImage2" class="pick0" [src]="srcImage2" >
+ <img *ngIf="!srcImage2" class="pick0" src="assets/image/profile_img.png">
+      </div>
+      </ion-col>
+
+
+<ion-col col-3 style="padding-left:0px;" *ngIf="arr.length<3">
+  <div class="input-sec" (click)="CameraAction()">
+      <div class="upld">
+      
+       <ion-icon ios="ios-add" md="md-add"></ion-icon>
+      </div>
+      </div>
+      </ion-col>
+
+   
+  </ion-row>
+    
+</ion-grid>
+</div>
+  
+
+
+ 
+ <div class="plusbtn">
+ <button ion-fab mini   (click)="AddProduct(productForm)" [disabled]="!productForm.valid"><ion-icon name="add"></ion-icon></button>
+
+</div>
+  </form>
+  </div>
+  </div>
+</ion-content>
+
+
+
+<!--<ion-footer>
+  <ion-toolbar >
+      <button ion-button full (click)="subcriptionbill()" color="theme-header">Done</button>
+  </ion-toolbar>
+</ion-footer>-->

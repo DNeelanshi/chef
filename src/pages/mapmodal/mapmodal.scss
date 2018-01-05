@@ -1,0 +1,17 @@
+page-mapmodal {
+
+#map{
+    height: 92%;
+    width:100%;
+}
+
+.bar-button-clear-ios, .bar-button-default.bar-button-ios-clear, .bar-button-clear-ios-clear {
+    color: #000;
+    background-color: transparent;
+}
+.list-ios {
+    margin: -1px 0 32px;
+    position: absolute;
+    z-index: 9999;
+}
+}
