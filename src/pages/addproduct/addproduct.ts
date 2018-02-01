@@ -118,7 +118,8 @@ onChange(val){
      var Serialized = this.serializeObj(postdata);
     var Loading = this.loadingCtrl.create({
       spinner: 'bubbles',
-      cssClass: 'loader'
+      cssClass: 'loader',
+       dismissOnPageChange:true
     });
     
       Loading.present().then(() => {
@@ -137,6 +138,13 @@ onChange(val){
       }
     } , (err) => {
         console.log(err);
+         let toast = this.toastCtrl.create({
+        message: 'Something went wrong',
+        duration: 3000,
+        position: 'middle'
+      });
+      toast.present();
+        Loading.dismissAll();
       })
   })}else{
       let toast = this.toastCtrl.create({

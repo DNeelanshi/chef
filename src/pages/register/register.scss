@@ -166,4 +166,17 @@ page-register {
     font-size: 23px;
 }
 
+.itemouter {
+    position:  relative;
+    width: 100%;
+    float: left;
+}
+
+.itemouter .icon {
+    position:  absolute;
+    right: 0;
+    top: 21px;
+    color:#484848
+}
+
 }

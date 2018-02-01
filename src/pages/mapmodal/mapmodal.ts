@@ -111,7 +111,8 @@ export class MapmodalPage {
       // alert(lat+','+long);
         var Loading = this.loadCtrl.create({
           spinner: 'bubbles',
-          cssClass: 'loader'
+          cssClass: 'loader',
+          dismissOnPageChange: true
         });
         Loading.present().then(() => {
        this.geolocation.getCurrentPosition().then((resp) => {
@@ -213,7 +214,13 @@ export class MapmodalPage {
  
       // alert("working1");
       }).catch((error) => {
-   
+         let toast = this.toastCtrl.create({
+        message: 'Something went wrong',
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+          Loading.dismissAll();
       let latLng = new google.maps.LatLng(this.crlat,this.crlng); 
    
       this.geocoder.geocode({'latLng': latLng}, ((results, status)=>{

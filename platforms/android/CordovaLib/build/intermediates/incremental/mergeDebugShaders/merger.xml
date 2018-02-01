@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Volumes/D/DNeelanshi/rafaho android/chef/chef/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Volumes/D/DNeelanshi/rafaho android/chef/chef/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\chef\chef\platforms\android\CordovaLib\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\chef\chef\platforms\android\CordovaLib\src\debug\shaders"/></dataSet></merger>

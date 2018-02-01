@@ -63,7 +63,8 @@ export class ProfilePage {
       var serialized = this.serializeObj(postdata);
       var Loading = this.loadingCtrl.create({
           spinner: 'bubbles',
-          cssClass: 'loader'
+          cssClass: 'loader',
+          dismissOnPageChange: true
         });
       console.log(postdata);
         Loading.present().then(() => {
@@ -75,7 +76,15 @@ this.http.post(this.appsetting.myGlobalVar + 'userinfo', serialized, options).ma
 			
 			 console.log(this.profile);
 
-		})
+		},(err)=>{
+                 let toast = this.toastCtrl.create({
+        message: 'Something went wrong',
+        duration: 3000,
+        position: 'middle'
+      });
+      toast.present();
+                    Loading.dismissAll();
+                })
         })
   }
    serializeObj(obj) {

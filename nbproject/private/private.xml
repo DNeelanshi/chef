@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/addproduct/addproduct.ts</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/addreference/addreference.html</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/addproduct/addproduct.html</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/processingform/processingform.html</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/processingform/processingform.ts</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/addreference/addreference.ts</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/register/register.html</file>
-            <file>file:/Volumes/D/DNeelanshi/rafaho%20android/chef/chef/src/pages/addproduct/addproduct.scss</file>
+            <file>file:/D:/chef/chef/src/pages/orderview/orderview.ts</file>
+            <file>file:/D:/chef/chef/src/pages/stafflist/stafflist.ts</file>
+            <file>file:/D:/chef/chef/src/pages/home/home.html</file>
+            <file>file:/D:/chef/chef/src/app/app.module.ts</file>
+            <file>file:/D:/chef/chef/config.xml</file>
+            <file>file:/D:/chef/chef/platforms/platforms.json</file>
+            <file>file:/D:/chef/chef/src/pages/home/home.ts</file>
+            <file>file:/D:/chef/chef/src/pages/register/register.ts</file>
+            <file>file:/D:/chef/chef/src/pages/home/home.scss</file>
+            <file>file:/D:/chef/chef/src/pages/mapmodal/mapmodal.ts</file>
         </group>
     </open-files>
 </project-private>

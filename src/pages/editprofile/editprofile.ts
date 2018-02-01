@@ -25,7 +25,7 @@ import * as moment from 'moment';
   templateUrl: 'editprofile.html',
 })
 export class EditprofilePage {
-  loading: any;
+
   Loader: any;
   id; userid; srcImage; imgTosend;
   proffile: any;
@@ -154,10 +154,17 @@ export class EditprofilePage {
     }
     console.log(this.data);
     var serialized = this.serializeObj(this.data);
+     var Loading = this.loadingCtrl.create({
+       spinner: 'bubbles',
+       cssClass: 'loader',
+       dismissOnPageChange: true
+     });
+     Loading.present().then(() => {
     this.http.post(this.appsetting.myGlobalVar + 'user_data_update', serialized, options)
       .map(res => res.json())
       .subscribe(data => {
         console.log(data);
+        Loading.dismiss()
         if (data.status == true) {
           // this.loading.dismiss();
           let toast = this.toastCtrl.create({
@@ -170,7 +177,16 @@ export class EditprofilePage {
 
           this.navCtrl.push(ProfilePage)
         }
-      }) }
+      },(err)=>{
+        let toast = this.toastCtrl.create({
+            message: "Something went wrong",
+            duration: 3000,
+            position: 'middle'
+          });
+          toast.present();
+            Loading.dismissAll()
+      }) }) 
+      }
   }
 
   CameraAction() {

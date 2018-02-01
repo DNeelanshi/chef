@@ -132,7 +132,8 @@ getdata() {
    var Serialized = this.serializeObj(refrenshe);
      var Loading = this.loadingCtrl.create({
       spinner: 'bubbles',
-      cssClass: 'loader'
+      cssClass: 'loader',
+        dismissOnPageChange: true
     });
      Loading.present().then(() => {
     this.http.post(this.appsetting.myGlobalVar+'refrence_info_update',Serialized,options).map(res=>res.json()).subscribe(response=>{
@@ -140,7 +141,19 @@ getdata() {
         //  console.log(response);
       Loading.dismiss();
        this.navCtrl.push(ExtrastaffPage);
-    })}) }
+    },(err)=>{
+    
+       let toast = this.toastCtrl.create({
+        message: 'Something went wrong',
+        duration: 3000,
+        position: 'middle'
+      });
+      toast.present();
+        Loading.dismissAll();
+        
+    })
+    })
+     }
   }
   
   phonevalidation(phone){

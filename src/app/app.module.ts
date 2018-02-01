@@ -20,6 +20,9 @@ import { ChatPage } from '../pages/chat/chat';
 import { ProfilePage } from '../pages/profile/profile';
 import { CalenderPage } from '../pages/calender/calender';
 import { OrderviewPage } from '../pages/orderview/orderview';
+import { CancelorderviewPage } from '../pages/cancelorderview/cancelorderview';
+import { PendingorderviewPage } from '../pages/pendingorderview/pendingorderview';
+import { HistoryorderviewPage } from '../pages/historyorderview/historyorderview';
 import { RafahofeedbackPage } from '../pages/rafahofeedback/rafahofeedback';
 import { AddproductPage } from '../pages/addproduct/addproduct';
 import { SubcriptionbillPage } from '../pages/subcriptionbill/subcriptionbill';
@@ -52,10 +55,13 @@ import { Camera } from '@ionic-native/camera';
     HomePage,
     TabsPage,
     RegisterPage,
+    CancelorderviewPage,
     SigninPage,
     ProcessingformPage,
+    PendingorderviewPage,
     AddreferencePage,
     ExtrastaffPage,
+    HistoryorderviewPage,
     OrderlistPage,
     AccountsPage,
     ChatPage,
@@ -98,12 +104,15 @@ import { Camera } from '@ionic-native/camera';
     SigninPage,
     ProcessingformPage,
     AddreferencePage,
+    HistoryorderviewPage,
     ExtrastaffPage,
+    CancelorderviewPage,
     EditstaffPage,
     OrderlistPage,
     AccountsPage,
     ChatPage,
     StafflistPage,
+    PendingorderviewPage,
     ProfilePage,
     CalenderPage,
     OrderviewPage,

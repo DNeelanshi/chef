@@ -33440,6 +33440,10 @@ ion-header ion-navbar .toolbar-content-md {
   padding: 0 60px;
   left: 0;
   right: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
 }
 
 /*-------------tab-md-start---------*/
@@ -35256,6 +35260,236 @@ page-addspecialities .footer .toolbar-md {
   min-height: 0 !important;
 }
 
+page-cancelorderview .aaa {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-cancelorderview .item-ios ion-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+page-cancelorderview .card.card-ios {
+  width: 100%;
+  margin: 0px;
+}
+
+page-cancelorderview .card-content {
+  padding: 0px 0px 1px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+page-cancelorderview .phone {
+  font-size: 13px;
+  margin-top: 17px;
+}
+
+page-cancelorderview .order {
+  margin: 0 0 2px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+page-cancelorderview .content-sec {
+  width: 100%;
+  float: left;
+}
+
+page-cancelorderview .content-sec .heading {
+  width: 100%;
+  float: left;
+  padding-left: 15px;
+}
+
+page-cancelorderview .content-sec .heading h3 {
+  width: 100%;
+  float: left;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111111;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+page-cancelorderview .content-sec .list {
+  width: 100%;
+  float: left;
+  margin: 0px;
+}
+
+page-cancelorderview .content-sec .item {
+  width: 100%;
+  float: left;
+  -webkit-box-align: inherit !important;
+  -webkit-align-items: inherit !important;
+  -ms-flex-align: inherit !important;
+  align-items: inherit !important;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 0px 0px;
+  border-top: none !important;
+}
+
+page-cancelorderview .content-sec .item .label {
+  margin-top: 8px;
+}
+
+page-cancelorderview .item-inner {
+  border: none !important;
+  padding-right: 0px !important;
+}
+
+page-cancelorderview .content-sec .item .label h2 {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: roboto;
+  color: #000000;
+}
+
+page-cancelorderview .content-sec .item .label p {
+  width: 100%;
+  float: left;
+  color: #6a6a6a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+page-cancelorderview .item .left-p {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+  margin-right: 0px;
+  font-family: roboto;
+}
+
+page-cancelorderview .item .note {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 16px;
+  margin-right: 0px;
+}
+
+page-cancelorderview .content-sec .item ion-thumbnail {
+  width: 55px !important;
+  min-width: auto;
+  min-height: auto;
+}
+
+page-cancelorderview .content-sec .item ion-thumbnail img {
+  width: 100% !important;
+  float: left !important;
+  height: auto !important;
+}
+
+page-cancelorderview .imgicon {
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+page-cancelorderview .total {
+  width: 100%;
+  float: left;
+  padding: 14px;
+}
+
+page-cancelorderview .total h2 {
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+  font-weight: 700;
+  margin: 0px;
+}
+
+page-cancelorderview .total .left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-cancelorderview .total .right {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-cancelorderview .user {
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #000000;
+}
+
+page-cancelorderview .paragraph {
+  overflow: inherit;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #8e9093;
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+page-cancelorderview .mob1 h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+
+page-cancelorderview .mob1 p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #666;
+  font-size: 12px;
+  color: #000;
+}
+
+page-cancelorderview .decline .button {
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+}
+
+page-cancelorderview .contact {
+  border-top: 1px solid #cecbcb;
+  background-color: #f8f8f8;
+}
+
+page-cancelorderview .back-button.show-back-button {
+  display: inline-block;
+  z-index: 9999;
+}
+
+page-cancelorderview .mob1 {
+  width: 100%;
+  float: left;
+  margin-top: 6px;
+}
+
 page-changepassword .content-sec {
   width: 100%;
   float: left;
@@ -35388,6 +35622,19 @@ page-changepassword span.button-inner {
 
 page-changepassword .button-md:hover:not(.disable-hover) {
   background-color: #ff563f;
+}
+
+page-changepassword .itemouter {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+page-changepassword .itemouter .icon {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  color: #484848;
 }
 
 page-chat .segment-sec {
@@ -36456,6 +36703,236 @@ page-help .top p {
   color: #6a6a6a;
 }
 
+page-historyorderview .aaa {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-historyorderview .item-ios ion-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+page-historyorderview .card.card-ios {
+  width: 100%;
+  margin: 0px;
+}
+
+page-historyorderview .card-content {
+  padding: 0px 0px 1px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+page-historyorderview .phone {
+  font-size: 13px;
+  margin-top: 17px;
+}
+
+page-historyorderview .order {
+  margin: 0 0 2px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+page-historyorderview .content-sec {
+  width: 100%;
+  float: left;
+}
+
+page-historyorderview .content-sec .heading {
+  width: 100%;
+  float: left;
+  padding-left: 15px;
+}
+
+page-historyorderview .content-sec .heading h3 {
+  width: 100%;
+  float: left;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111111;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+page-historyorderview .content-sec .list {
+  width: 100%;
+  float: left;
+  margin: 0px;
+}
+
+page-historyorderview .content-sec .item {
+  width: 100%;
+  float: left;
+  -webkit-box-align: inherit !important;
+  -webkit-align-items: inherit !important;
+  -ms-flex-align: inherit !important;
+  align-items: inherit !important;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 0px 0px;
+  border-top: none !important;
+}
+
+page-historyorderview .content-sec .item .label {
+  margin-top: 8px;
+}
+
+page-historyorderview .item-inner {
+  border: none !important;
+  padding-right: 0px !important;
+}
+
+page-historyorderview .content-sec .item .label h2 {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: roboto;
+  color: #000000;
+}
+
+page-historyorderview .content-sec .item .label p {
+  width: 100%;
+  float: left;
+  color: #6a6a6a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+page-historyorderview .item .left-p {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+  margin-right: 0px;
+  font-family: roboto;
+}
+
+page-historyorderview .item .note {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 16px;
+  margin-right: 0px;
+}
+
+page-historyorderview .content-sec .item ion-thumbnail {
+  width: 55px !important;
+  min-width: auto;
+  min-height: auto;
+}
+
+page-historyorderview .content-sec .item ion-thumbnail img {
+  width: 100% !important;
+  float: left !important;
+  height: auto !important;
+}
+
+page-historyorderview .imgicon {
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+page-historyorderview .total {
+  width: 100%;
+  float: left;
+  padding: 14px;
+}
+
+page-historyorderview .total h2 {
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+  font-weight: 700;
+  margin: 0px;
+}
+
+page-historyorderview .total .left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-historyorderview .total .right {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-historyorderview .user {
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #000000;
+}
+
+page-historyorderview .paragraph {
+  overflow: inherit;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #8e9093;
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+page-historyorderview .mob1 h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+
+page-historyorderview .mob1 p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #666;
+  font-size: 12px;
+  color: #000;
+}
+
+page-historyorderview .decline .button {
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+}
+
+page-historyorderview .contact {
+  border-top: 1px solid #cecbcb;
+  background-color: #f8f8f8;
+}
+
+page-historyorderview .back-button.show-back-button {
+  display: inline-block;
+  z-index: 9999;
+}
+
+page-historyorderview .mob1 {
+  width: 100%;
+  float: left;
+  margin-top: 6px;
+}
+
 page-home .segment-sec {
   width: 100%;
   float: left;
@@ -36914,6 +37391,236 @@ page-payment .content .list .item ion-thumbnail img {
 
 page-payment .ion-md-arrow-forward:before {
   content: "\f3d1";
+}
+
+page-pendingorderview .aaa {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-pendingorderview .item-ios ion-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+page-pendingorderview .card.card-ios {
+  width: 100%;
+  margin: 0px;
+}
+
+page-pendingorderview .card-content {
+  padding: 0px 0px 1px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+page-pendingorderview .phone {
+  font-size: 13px;
+  margin-top: 17px;
+}
+
+page-pendingorderview .order {
+  margin: 0 0 2px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+page-pendingorderview .content-sec {
+  width: 100%;
+  float: left;
+}
+
+page-pendingorderview .content-sec .heading {
+  width: 100%;
+  float: left;
+  padding-left: 15px;
+}
+
+page-pendingorderview .content-sec .heading h3 {
+  width: 100%;
+  float: left;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111111;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+page-pendingorderview .content-sec .list {
+  width: 100%;
+  float: left;
+  margin: 0px;
+}
+
+page-pendingorderview .content-sec .item {
+  width: 100%;
+  float: left;
+  -webkit-box-align: inherit !important;
+  -webkit-align-items: inherit !important;
+  -ms-flex-align: inherit !important;
+  align-items: inherit !important;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 0px 0px;
+  border-top: none !important;
+}
+
+page-pendingorderview .content-sec .item .label {
+  margin-top: 8px;
+}
+
+page-pendingorderview .item-inner {
+  border: none !important;
+  padding-right: 0px !important;
+}
+
+page-pendingorderview .content-sec .item .label h2 {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: roboto;
+  color: #000000;
+}
+
+page-pendingorderview .content-sec .item .label p {
+  width: 100%;
+  float: left;
+  color: #6a6a6a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+page-pendingorderview .item .left-p {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+  margin-right: 0px;
+  font-family: roboto;
+}
+
+page-pendingorderview .item .note {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 16px;
+  margin-right: 0px;
+}
+
+page-pendingorderview .content-sec .item ion-thumbnail {
+  width: 55px !important;
+  min-width: auto;
+  min-height: auto;
+}
+
+page-pendingorderview .content-sec .item ion-thumbnail img {
+  width: 100% !important;
+  float: left !important;
+  height: auto !important;
+}
+
+page-pendingorderview .imgicon {
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+page-pendingorderview .total {
+  width: 100%;
+  float: left;
+  padding: 14px;
+}
+
+page-pendingorderview .total h2 {
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+  font-weight: 700;
+  margin: 0px;
+}
+
+page-pendingorderview .total .left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-pendingorderview .total .right {
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-pendingorderview .user {
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #000000;
+}
+
+page-pendingorderview .paragraph {
+  overflow: inherit;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #8e9093;
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+page-pendingorderview .mob1 h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+
+page-pendingorderview .mob1 p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #666;
+  font-size: 12px;
+  color: #000;
+}
+
+page-pendingorderview .decline .button {
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+}
+
+page-pendingorderview .contact {
+  border-top: 1px solid #cecbcb;
+  background-color: #f8f8f8;
+}
+
+page-pendingorderview .back-button.show-back-button {
+  display: inline-block;
+  z-index: 9999;
+}
+
+page-pendingorderview .mob1 {
+  width: 100%;
+  float: left;
+  margin-top: 6px;
 }
 
 page-processingform ion-header .toolbar-content ion-title {
@@ -37777,6 +38484,19 @@ page-register .header .button span {
   font-size: 23px;
 }
 
+page-register .itemouter {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+page-register .itemouter .icon {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  color: #484848;
+}
+
 page-signin .text {
   margin-top: -177px;
   margin-left: 16px;
@@ -37941,6 +38661,19 @@ page-signin .top-img {
 page-signin .btn-sec {
   float: left;
   width: 100%;
+}
+
+page-signin .itemouter {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+page-signin .itemouter .icon {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  color: #484848;
 }
 
 page-stafflist .btnprofile {

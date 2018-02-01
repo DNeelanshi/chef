@@ -30,197 +30,77 @@
 
 <div [ngSwitch]="pet" class="box">
   <ion-list *ngSwitchCase="'PENDING ORDER'">
-    <ion-item >
+    
+    <ion-item (click)="order1(dats)" *ngFor="let dats of pendingorders" >
 
       <ion-thumbnail item-start>
-         <img src="assets/image/img1.png">
+         <img [src]="dats.products[0]?.image">
 
       </ion-thumbnail>
-     <h2>User name <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
+     <h2>{{dats?.name}} <span class="rightp">Home Delivery</span></h2>
+    <p>{{dats.products[0]?.product_name}}</p>
+     <p>{{dats?.booking_datetime}}</p>
+ 
     </ion-item>
-  
+
+   <p *ngIf="notavail1 == 1">No pending orders yet</p>
   </ion-list>
 
-
+   
 
   
 
-  <ion-list *ngSwitchCase="'ACTIVEORDER'">
-    <ion-item (click)="order()">
-      <ion-thumbnail item-start>
-        <img src="assets/image/img1.png">
-      </ion-thumbnail>
-      <h2>User name <span class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
-    </ion-item>
+  <ion-list *ngSwitchCase="'ACTIVEORDER'" >
+
+      <div *ngFor="let dat of orders">
   
-  </ion-list>
-   <ion-list *ngSwitchCase="'ACTIVEORDER'">
-    <ion-item>
+    <ion-item (click)="order(dat)">
+       
       <ion-thumbnail item-start>
-        <img src="assets/image/img2.png">
+        <img [src]="dat.products[0]?.image">
+
       </ion-thumbnail>
-      <h2>User name<span class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
+      <h2>{{dat?.name}} <span class="rightp">Cook at Home</span></h2>
+    <p >{{dat.products[0]?.product_name}}</p>
+     <p>{{dat?.booking_datetime}}</p>
    
     </ion-item>
-  
+              
+  </div>
+      <p *ngIf="notavail == 1">No active orders yet</p>
   </ion-list>
 
- <ion-list *ngSwitchCase="'ACTIVEORDER'">
-   <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/image/img3.png">
-      </ion-thumbnail>
-      <h2>User name <span class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
-    </ion-item>
-  
-  </ion-list>
-
- <ion-list *ngSwitchCase="'ACTIVEORDER'">
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/image/img4.png">
-      </ion-thumbnail>
-      <h2>User name <span class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-   
-    </ion-item>
-  
-  </ion-list>
-
-
-
- <ion-list *ngSwitchCase="'ACTIVEORDER'">
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/image/img5.png">
-      </ion-thumbnail>
-      <h2>User name<span class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    </ion-item>
-  
-  </ion-list>
 
   <div *ngSwitchCase="'ORDER HISTORY'">
    <ion-list >
-     <h1 class="cancel">TOATAL EARNED <span  style="color:black; font-weight: 700;" class="rightp">$ 2000.00</span></h1>
-    <ion-item>
+     <h1 class="cancel">TOTAL EARNED <span  style="color:black; font-weight: 700;" class="rightp">$ {{earned}}</span></h1>
+    <ion-item (click)="order2(datts)" *ngFor="let datts of historyorders">
       <ion-thumbnail item-start>
-        <img src="assets/image/img1.png">
+        <img [src]="datts.products[0]?.image">
       </ion-thumbnail>
-      <h2>Luna <span class="rightp">Home Delivery</span></h2>
-       <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
+      <h2>{{datts?.name}}<span class="rightp">Home Delivery</span></h2>
+       <p>{{datts.products[0]?.product_name}}</p>
+     <p>{{datts?.booking_datetime}}</p>
   
     </ion-item>
-
-  
-    <ion-item>
-       <ion-thumbnail item-start>
-        <img src="assets/image/img2.png">
-      </ion-thumbnail>
-      <h2>User name <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
-    </ion-item>
+<p *ngIf="notavail == 2">No orders yet</p>
    </ion-list>
    <h1 class="cancel">CANCELLED ORDER</h1>
    <ion-list>
-    <ion-item>
+    <ion-item (click)="order3(dt)" *ngFor="let dt of canceledorders">
        <ion-thumbnail item-start>
-        <img src="assets/image/img5.png">
+        <img [src]="dt.products[0]?.image">
       </ion-thumbnail>
-      <h2>User name <span style="color:red;" class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
+      <h2>{{dt?.name}} <span style="color:red;" class="rightp">Home Delivery</span></h2>
+    <p>{{dt.products[0]?.product_name}}</p>
+     <p>{{dt?.booking_datetime}}</p>
    
     </ion-item>
-  
-    <ion-item>
-       <ion-thumbnail item-start>
-        <img src="assets/image/img4.png">
-      </ion-thumbnail>
-      <h2>User name <span style="color:red;" class="rightp">Cook at Home</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-
-    </ion-item>
+  <p *ngIf="notavail == 1">No orders yet</p>
   </ion-list>
   </div>
 
 
-    <ion-list *ngSwitchCase="'PENDING ORDER'">
-    <ion-item >
-
-      <ion-thumbnail item-start>
-         <img src="assets/image/img2.png">
-
-      </ion-thumbnail>
-     <h2>User name  <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-  
-    </ion-item>
-  
-  </ion-list>
-
-  <ion-list *ngSwitchCase="'PENDING ORDER'">
-    <ion-item >
-
-      <ion-thumbnail item-start>
-         <img src="assets/image/img3.png">
-
-      </ion-thumbnail>
-     <h2>User name  <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
-    </ion-item>
-  
-  </ion-list>
-
-  <ion-list *ngSwitchCase="'PENDING ORDER'">
-    <ion-item >
-
-      <ion-thumbnail item-start>
-         <img src="assets/image/img4.png">
-
-      </ion-thumbnail>
-     <h2>User name  <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-    
-    </ion-item>
-  
-  </ion-list>
-
-  <ion-list *ngSwitchCase="'PENDING ORDER'">
-    <ion-item >
-
-      <ion-thumbnail item-start>
-         <img src="assets/image/img5.png">
-
-      </ion-thumbnail>
-     <h2>User name <span class="rightp">Home Delivery</span></h2>
-    <p>Idli, sambhar, Kerla</p>
-     <p>19 august 2017 20:12am</p>
-   
-    </ion-item>
-  
-  </ion-list>
 
 
 </div>

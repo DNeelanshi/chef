@@ -92,9 +92,9 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-plugin-add-swift-support": "1.7.0",
-  "cordova-plugin-camera": "3.0.0",
+  "cordova-plugin-camera": "2.4.1",
   "cordova-plugin-device": "1.1.4",
-  "cordova-plugin-geolocation": "3.0.0",
+  "cordova-plugin-geolocation": "2.4.3",
   "cordova-plugin-ionic-webview": "1.1.11",
   "cordova-plugin-nativegeocoder": "2.0.4",
   "cordova-plugin-splashscreen": "4.0.3",

@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 451:
+/***/ 458:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FrequentquestionsPageModule", function() { return FrequentquestionsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__frequentquestions__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(129);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FrequentquestionsPageModule = (function () {
-    function FrequentquestionsPageModule() {
+var HelpPageModule = (function () {
+    function HelpPageModule() {
     }
-    return FrequentquestionsPageModule;
+    return HelpPageModule;
 }());
-FrequentquestionsPageModule = __decorate([
+HelpPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__frequentquestions__["a" /* FrequentquestionsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__frequentquestions__["a" /* FrequentquestionsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
         ],
     })
-], FrequentquestionsPageModule);
+], HelpPageModule);
 
-//# sourceMappingURL=frequentquestions.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ })
 

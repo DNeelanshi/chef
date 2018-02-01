@@ -49,10 +49,13 @@
                     </div>
                   </div>
                 </div>
+            
+            <div class="itemouter">
           <ion-item>
             <ion-label stacked>PASSWORD</ion-label>
-            <ion-input type="password" [(ngModel)]="data.password" #password="ngModel" name="password"  minlength="6" required></ion-input>
+            <ion-input type="{{ptype}}" [(ngModel)]="data.password" #password="ngModel" name="password"  minlength="6" required></ion-input>
           </ion-item>
+               <ion-icon name="{{iconname}}" (click)="showPassword()" ></ion-icon> 
          			 <div *ngIf="password.errors && (password.dirty || password.touched)">
               <div [hidden]="!password.errors.required">
                 Password is required
@@ -61,6 +64,7 @@
 								Password must be at least 6 digits
 							</div>
                                          
+            </div>
             </div>
         </ion-list>
         <div class="btn-sec">

@@ -21,13 +21,13 @@
 
   <ion-item style="align-items: baseline;">
     <ion-avatar item-start>
-      <img src="assets/image/order-img.png">
+      <img src="assets/image/user1.png">
     </ion-avatar>
-    <h2 class="user">User name</h2>
-    <p class="paragraph">username@yahoo.com</p>
+    <h2 class="user">{{userdata.firstname}}</h2>
+    <p class="paragraph">{{userdata.email}}</p>
     <h2  class="user">Address:</h2> 
-    <p class="paragraph">71 Pilgrim Avenue </p>
-      <p class="paragraph"> MD 20815</p>
+    <p class="paragraph">{{str1}} </p>
+      <p class="paragraph">{{str2}}</p>
   </ion-item>
 
 
@@ -36,22 +36,22 @@
   <ion-row>
     <ion-col col-4>
       <div class="mob1">
-        <h2>12-10-2017</h2>
-         <p>20:15pm</p>
+        <h2>{{str3[0]}}</h2>
+         <p>{{str5[0]}}</p>
           </div>
      
     </ion-col>
 
 <ion-col col-4>
       <div class="decline">
-       <button ion-button color="secondary">Accept</button>
+       <button ion-button color="secondary" (click)="accept()">Accept</button>
       </div>
     </ion-col>
 
 
     <ion-col col-4>
       <div class="decline">
-       <button ion-button color="btncolor">Decline</button>
+       <button ion-button color="btncolor" (click)="decline()">Decline</button>
       </div>
     </ion-col>
 
@@ -65,27 +65,29 @@
    <h3>Order Items:</h3>
   </div>
    <ion-list>
-     <ion-item>
+     <ion-item *ngFor ="let dat of prodcts1">
        <ion-thumbnail item-start>
-         <img src="assets/image/southfod.png">
+         <img src="{{dat?.image}}">
        </ion-thumbnail>
-       <h2>Croquettes</h2>
-       <p>Qty: 2 x $30</p>
+         
+         
+       <h2>{{dat?.product_name}}</h2>
+       <p>Qty: {{dat?.quantity}} x ${{dat?.minorder}}</p>
 
-       <ion-note item-end="" class="note note-ios">$60.00</ion-note>
+       <ion-note item-end="" class="note note-ios">${{dat?.quantity*dat?.minorder}}</ion-note>
         
      </ion-item>
     
-      <ion-item>
+<!--      <ion-item>
        <ion-thumbnail item-start>
          <img src="assets/image/southfod.png">
        </ion-thumbnail>
        <h2>Croquettes</h2>
        <p>Qty: 2 x $30</p>
        <ion-note item-end="" class="note note-ios">$60.00</ion-note>
-     </ion-item>
+     </ion-item>-->
     
-
+<!--
 <ion-item>
        <ion-thumbnail item-start>
          <img src="assets/image/southfod.png">
@@ -93,7 +95,7 @@
        <h2>Croquettes</h2>
        <p>Qty: 2 x $30</p>
        <ion-note item-end="" class="note note-ios">$60.00</ion-note>
-     </ion-item>
+     </ion-item>-->
 
 
 
@@ -101,7 +103,7 @@
 </div>
 <div class="total">
  <h2 class="left">Subtotal</h2>
- <h2 class="right">$108.00</h2>
+ <h2 class="right">${{total}}</h2>
 </div>
 
 

@@ -79,34 +79,34 @@
   },
   "installed_plugins": {
     "cordova-plugin-add-swift-support": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-nativegeocoder": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.chef"
+      "PACKAGE_NAME": "io.rafaho"
     }
   },
   "dependent_plugins": {},
@@ -201,9 +201,9 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-add-swift-support": "1.7.0",
-    "cordova-plugin-camera": "3.0.0",
+    "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-device": "1.1.4",
-    "cordova-plugin-geolocation": "3.0.0",
+    "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-ionic-webview": "1.1.11",
     "cordova-plugin-nativegeocoder": "2.0.4",
     "cordova-plugin-splashscreen": "4.0.3",

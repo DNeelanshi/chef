@@ -30,7 +30,13 @@ export class RegisterPage {
   date: any;
   pass: boolean;
   public lat: number;
+  public Ctype = 'password';
+  public iconname1 = 'eye';
   public long: number;
+  public ptype = 'password';
+  public iconname = 'eye';
+   public showCpass:boolean = false;
+  public showpass:boolean = false;
   public data:any = [];
   // user: FormGroup;
   constructor(
@@ -106,6 +112,7 @@ if(register.value.phone){
     var Loading = this.loadingCtrl.create({
       spinner: 'bubbles',
       cssClass: 'loader',
+      dismissOnPageChange:true
       
     });
     Loading.present().then(() => {
@@ -127,6 +134,9 @@ if(register.value.phone){
       }else{
         this.AlertMsg1(response.message)
       }
+    },(err)=>{
+     this.AlertMsg1('Something went wrong')
+        Loading.dismissAll();
     })
   })}
   } else{
@@ -144,7 +154,8 @@ if(register.value.phone){
         var Loading = this.loadingCtrl.create({
           spinner: 'bubbles',
           cssClass: 'loader',
-         content:'Make sure your Location is on....'
+         content:'Make sure your Location is on....',
+           dismissOnPageChange:true
         });
          Loading.present().then(() => {
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -172,6 +183,7 @@ if(register.value.phone){
      }).catch((error) => {
        console.log('Error getting location', error);
        this.ToastMsg('Please enable your location');
+       Loading.dismissAll();
      }); })
   }
 
@@ -196,7 +208,26 @@ if(register.value.phone){
       toast.present();
     }
   }
-
+   showPassword() {    
+   console.log('showpassword');   
+    this.showpass = !this.showpass;   
+     if(this.showpass){    
+       this.ptype = 'text';  
+           this.iconname = 'eye-off';  
+             } else {    
+               this.ptype = 'password';   
+                  this.iconname = 'eye';    }  }
+                  
+                    showCPassword() {    
+   console.log('showCpassword');   
+    this.showCpass = !this.showCpass;   
+     if(this.showCpass){    
+       this.Ctype = 'text';  
+           this.iconname1 = 'eye-off';  
+             } else {    
+               this.Ctype = 'password';   
+                  this.iconname1 = 'eye';    }  }
+  
  isReadonly() {
     return this.isReadonly;   //return true/false 
   }

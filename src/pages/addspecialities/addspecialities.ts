@@ -61,7 +61,8 @@ export class AddspecialitiesPage {
     var serialized = this.serializeObj(postdata);
      var Loading = this.loadingCtrl.create({
       spinner: 'bubbles',
-      cssClass: 'loader'
+      cssClass: 'loader',
+        dismissOnPageChange: true
     });
     
       Loading.present().then(() => {
@@ -78,6 +79,7 @@ export class AddspecialitiesPage {
         }
       }, (err) => {
         console.log(err);
+        Loading.dismissAll();
       })
       }) }else{
         let toast = this.toastCtrl.create({

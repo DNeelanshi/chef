@@ -19,7 +19,9 @@ import { ForgotPage } from '../forgot/forgot';
   templateUrl: 'signin.html',
 })
 export class SigninPage {
-
+ public iconname = 'eye';
+   public showpass:boolean = false;
+   public ptype = 'password';
 public data:any = '';
   constructor(
     public navCtrl: NavController,
@@ -57,7 +59,8 @@ Signin(logindata){
   var Serialized = this.serializeObj(postdata);
   var Loading = this.loadingCtrl.create({
     spinner: 'bubbles',
-    cssClass: 'loader'
+    cssClass: 'loader',
+     dismissOnPageChange:true
   });
 
   Loading.present().then(() => {
@@ -86,11 +89,23 @@ Signin(logindata){
     }
     else{
       this.ToastMsg(response.message);
+      Loading.dismissAll();
     }
+  },(err)=>{
+      Loading.dismissAll();
   })
 }) 
 }
 }
+ showPassword() {    
+   console.log('showpassword');   
+    this.showpass = !this.showpass;   
+     if(this.showpass){    
+       this.ptype = 'text';  
+           this.iconname = 'eye-off';  
+             } else {    
+               this.ptype = 'password';   
+                  this.iconname = 'eye';    }  }
 serializeObj(obj) {
   var result = [];
   for (var property in obj)

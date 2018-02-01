@@ -127,10 +127,12 @@
                 </div>
               </ion-col>
               <ion-col col-12 class="left right" style="position:initial;">
+                  <div class="itemouter">
                 <ion-item>
                   <ion-label stacked>PASSWORD</ion-label>
-                  <ion-input type="password" [(ngModel)]="data.password" name="password" #password="ngModel"   pattern="(?!^[0-9]*$)(?!^[a-zA-Z@/*/#]*$)(?!^[a-zA-Z0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9@/*/#]{6,30})" required></ion-input>
+                  <ion-input type="{{ptype}}" [(ngModel)]="data.password" name="password" #password="ngModel"     pattern="(?!^[0-9]*$)(?!^[0-9@/*/-/#/&/^/$/\/|/;/_/,/~/?/!/./''/`/<>/%/:/{}/()/+/=]*$)(?!^[a-zA-Z@/*/#/&/^/$/;/_/,/~/?/\/|/''/-/`/./\/!/<>/%/:/()/{}/+/=]*$)(?!^[a-zA-Z0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9@/*/#/&/$/;/_/{}/%/:/^/?/~/`/''/|/,/-/<>/!/\/./()/+/=]{6,30})"   required></ion-input>
                 </ion-item>
+                   <ion-icon name="{{iconname}}" (click)="showPassword()" ></ion-icon>  
                 <div class="alert alert-danger" color="danger">
                   <div *ngIf="password.errors && (password.dirty || password.touched)">
                     <div [hidden]="!password.errors.required">
@@ -144,12 +146,15 @@
                     </div>
                   </div>
                 </div>
+                  </div>
               </ion-col>
               <ion-col col-12 class="left right" style="position:initial;">
+                  <div class="itemouter">
                 <ion-item>
                   <ion-label stacked>CONFIRM PASSWORD</ion-label>
-                  <ion-input type="password" [(ngModel)]="data.cpassword" name="cpassword" #cpassword="ngModel" validateEqual="registrationForm.value.password" required></ion-input>
+                  <ion-input type="{{Ctype}}" [(ngModel)]="data.cpassword" name="cpassword" #cpassword="ngModel" validateEqual="registrationForm.value.password" required></ion-input>
                 </ion-item>
+                  <ion-icon name="{{iconname}}" (click)="showCPassword()" ></ion-icon>  
                 <ion-label class="alert alert-danger" color="danger">
                     <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)">
                         <div [hidden]="!cpassword.errors.required">
@@ -166,6 +171,7 @@
                 <!-- <small [hidden]="cpassword.valid || (cpassword.pristine && !f.submitted)">
                   Password mismatch
               </small> -->
+                  </div>
               </ion-col>
               <ion-col col-12 class="left right" style="position:initial;">
                   <div style="position: relative; overflow: hidden;">
