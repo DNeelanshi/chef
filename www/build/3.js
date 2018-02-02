@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 473:
+/***/ 490:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubcriptionbillPageModule", function() { return SubcriptionbillPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditproductPageModule", function() { return EditproductPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subcriptionbill__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__editproduct__ = __webpack_require__(491);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SubcriptionbillPageModule = (function () {
-    function SubcriptionbillPageModule() {
+var EditproductPageModule = (function () {
+    function EditproductPageModule() {
     }
-    return SubcriptionbillPageModule;
+    return EditproductPageModule;
 }());
-SubcriptionbillPageModule = __decorate([
+EditproductPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__subcriptionbill__["a" /* SubcriptionbillPage */],
+            __WEBPACK_IMPORTED_MODULE_2__editproduct__["a" /* EditproductPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__subcriptionbill__["a" /* SubcriptionbillPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__editproduct__["a" /* EditproductPage */]),
         ],
     })
-], SubcriptionbillPageModule);
+], EditproductPageModule);
 
-//# sourceMappingURL=subcriptionbill.module.js.map
+//# sourceMappingURL=editproduct.module.js.map
 
 /***/ })
 

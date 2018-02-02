@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController,ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController,ToastController,LoadingController} from 'ionic-angular';
 import { Http, Headers, RequestOptions, RequestMethod } from '@angular/http';
 import { Appsetting } from '../../providers/appsetting';
 import{ EditstaffPage}from '../editstaff/editstaff';
@@ -33,6 +33,7 @@ export class StafflistPage {
   constructor(public navCtrl: NavController, 
       public navParams: NavParams,
       private alertCtrl:AlertController,
+       private loadingCtrl:LoadingController,
       public appsetting: Appsetting,
       private toastCtrl:ToastController, public http: Http) {
   this.stafflist();
@@ -50,7 +51,15 @@ export class StafflistPage {
     };
     var serialized = this.serializeObj(postdata);
     // this.loading.dismiss();
+    var Loading = this.loadingCtrl.create({
+          spinner: 'bubbles',
+          cssClass: 'loader',
+          dismissOnPageChange: true
+        });
+      console.log(postdata);
+        Loading.present().then(() => {
     this.http.post(this.appsetting.myGlobalVar + 'userinfo', serialized, options).map(res => res.json()).subscribe(data1 => {
+        Loading.dismiss();
            if (data1.data) {
          console.log(data1.data.extra_staffs);
         this.array = data1.data.extra_staffs
@@ -65,7 +74,15 @@ export class StafflistPage {
 //           localStorage.removeItem('Extrastaff4');
 //            localStorage.removeItem('Extrastaff5');
         
-    });  
+    },(err)=>{
+        let toast = this.toastCtrl.create({
+        message: 'Something went wrong',
+        duration: 3000,
+        position: 'middle'
+      });
+      toast.present();
+      Loading.dismissAll();
+    });  })
  }
     serializeObj(obj) {
     var result = [];

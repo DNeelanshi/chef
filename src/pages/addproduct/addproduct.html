@@ -114,9 +114,10 @@
                 </div>-->
           <ion-label stacked style="margin-top: 17px;" >PRODUCT INGREDIENTS</ion-label>
 <div>
-      <ion-tags-input style="position:initial;" placeholder="+Ingredients" [(ngModel)]="tagss" [ngModelOptions]="{standalone: true}" (onChange)="onChanges($event)" required></ion-tags-input>
+    <rl-tag-input style="position:initial;" placeholder="+Ingredients" [(ngModel)]="tagss" [ngModelOptions]="{standalone: true}" (focusout)="onChanges(tagss)" required></rl-tag-input>
+      <!--<ion-tags-input data-tap-disabled="true" style="position:initial;" placeholder="+Ingredients" [once]="'true'" [(ngModel)]="tagss" [ngModelOptions]="{standalone: true}" (onChange)="onChanges($event)" (focusout)="focus($event)" required></ion-tags-input>-->
 <div class="alert alert-danger" color="danger">
-                  <div *ngIf="tagss.errors && (tagss.dirty || tagss.touched)" >
+                  <div *ngIf="tagss.errors && (tagss.dirty || tagss.touched)">
                     <div [hidden]="!tagss.errors.required">
                       Product Ingredients are required
                     </div>
@@ -162,7 +163,7 @@
         
         <ion-label stacked style="margin-top: 17px;" >TAGS</ion-label>
 <div>
-      <ion-tags-input style="position:initial;" [(ngModel)]="tag" [ngModelOptions]="{standalone: true}" (onChange)="onChange($event)" required></ion-tags-input>
+      <rl-tag-input style="position:initial;" [(ngModel)]="tag" [ngModelOptions]="{standalone: true}" (focusout)="onChange(tag)" required></rl-tag-input>
 </div>
 <!--            <div class="tag-container">
     <span class="tag" *ngFor="let tag of tags">

@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 447:
+/***/ 460:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddspecialitiesPageModule", function() { return AddspecialitiesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CancelorderviewPageModule", function() { return CancelorderviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addspecialities__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cancelorderview__ = __webpack_require__(137);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddspecialitiesPageModule = (function () {
-    function AddspecialitiesPageModule() {
+var CancelorderviewPageModule = (function () {
+    function CancelorderviewPageModule() {
     }
-    return AddspecialitiesPageModule;
+    return CancelorderviewPageModule;
 }());
-AddspecialitiesPageModule = __decorate([
+CancelorderviewPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__addspecialities__["a" /* AddspecialitiesPage */],
+            __WEBPACK_IMPORTED_MODULE_2__cancelorderview__["a" /* CancelorderviewPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__addspecialities__["a" /* AddspecialitiesPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cancelorderview__["a" /* CancelorderviewPage */]),
         ],
     })
-], AddspecialitiesPageModule);
+], CancelorderviewPageModule);
 
-//# sourceMappingURL=addspecialities.module.js.map
+//# sourceMappingURL=cancelorderview.module.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 471:
+/***/ 484:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SigninPageModule", function() { return SigninPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubcriptionbillPageModule", function() { return SubcriptionbillPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signin__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subcriptionbill__ = __webpack_require__(124);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SigninPageModule = (function () {
-    function SigninPageModule() {
+var SubcriptionbillPageModule = (function () {
+    function SubcriptionbillPageModule() {
     }
-    return SigninPageModule;
+    return SubcriptionbillPageModule;
 }());
-SigninPageModule = __decorate([
+SubcriptionbillPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__signin__["a" /* SigninPage */],
+            __WEBPACK_IMPORTED_MODULE_2__subcriptionbill__["a" /* SubcriptionbillPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__signin__["a" /* SigninPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__subcriptionbill__["a" /* SubcriptionbillPage */]),
         ],
     })
-], SigninPageModule);
+], SubcriptionbillPageModule);
 
-//# sourceMappingURL=signin.module.js.map
+//# sourceMappingURL=subcriptionbill.module.js.map
 
 /***/ })
 

@@ -44,14 +44,20 @@ import { Appsetting } from '../providers/appsetting';
 import { HttpModule } from '@angular/http';
 import { Device } from '@ionic-native/device';
 import{ StafflistPage}from '../pages/stafflist/stafflist';
+import{ ProductlistPage}from '../pages/productlist/productlist';
 import { ChangepasswordPage} from '../pages/changepassword/changepassword';
 import { MomentModule } from 'angular2-moment';
+import {EditproductPage} from '../pages/editproduct/editproduct';
 import { Camera } from '@ionic-native/camera';
+import {RlTagInputModule} from 'angular2-tag-input';
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
+  
     ContactPage,
+    EditproductPage,
     HomePage,
     TabsPage,
     RegisterPage,
@@ -59,6 +65,7 @@ import { Camera } from '@ionic-native/camera';
     SigninPage,
     ProcessingformPage,
     PendingorderviewPage,
+    ProductlistPage,
     AddreferencePage,
     ExtrastaffPage,
     HistoryorderviewPage,
@@ -91,6 +98,7 @@ import { Camera } from '@ionic-native/camera';
     HttpModule,
     MomentModule,
      IonTagsInputModule,
+     RlTagInputModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -101,7 +109,9 @@ import { Camera } from '@ionic-native/camera';
     HomePage,
     TabsPage,
     RegisterPage,
+    EditproductPage,
     SigninPage,
+    ProductlistPage,
     ProcessingformPage,
     AddreferencePage,
     HistoryorderviewPage,

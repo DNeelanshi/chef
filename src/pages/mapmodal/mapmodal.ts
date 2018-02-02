@@ -256,7 +256,9 @@ export class MapmodalPage {
       console.log(this.crlng)
       //  alert(this.crlat);
       // alert(this.crlng);
-     let latLong = new google.maps.LatLng(this.crlat,this.crlng); 
+     let latLong = new google.maps.LatLng(this.crlat,this.crlng);
+     this.lat=this.crlat;
+     this.long = this.crlng; 
 	  this.geocoder.geocode({'latLng': latLong}, ((results, status)=>{
 		  console.log(results);
 		   if (status == google.maps.GeocoderStatus.OK) {
@@ -307,6 +309,8 @@ watch.subscribe((data) => {
           this.map.setCenter(results[0].geometry.location);
           this.crlat = results[0].geometry.location.lat();
           this.crlng = results[0].geometry.location.lng();
+          this.lat=this.crlat;
+          this.long=this.crlng;
           var marker = new google.maps.Marker({
             map: this.map,
             position: results[0].geometry.location
@@ -351,8 +355,10 @@ clsmodel(){
 
   closeModal() {
       console.log(this.autocomplete.query)
+      console.log(this.lat,this.long);
       this.viewCtrl.dismiss({
         address:this.autocomplete.query,
+      
         lati: this.lat,
         longi:this.long
       });

@@ -34492,9 +34492,48 @@ page-addproduct .back-button.show-back-button {
   z-index: 9999;
 }
 
-page-addproduct ion-tags-input .ion-tags-input .iti-tag-color {
+page-addproduct r1-tags-input .r1-tags-input .iti-tag-color {
   background-color: #ff563f;
   color: white;
+}
+
+page-addproduct [_nghost-c1] {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ff563f;
+  color: white;
+  margin-top: 10px;
+}
+
+page-addproduct .ng2-tag-input-focus[_nghost-c0] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-addproduct [_nghost-c1] .ng2-tag-input-remove[_ngcontent-c1] {
+  font-size: 14px;
+  height: 18px;
+  line-height: 19px;
+  width: 18px;
+  background-color: #ff563f;
+  color: #fff;
+}
+
+page-addproduct [_nghost-c0] {
+  border-bottom: 0.55px solid #c8c7cc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-addproduct [_nghost-c0] .ng2-tag-input-field[_ngcontent-c0] {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
 }
 
 ion-alert[role="dialog"] .alert-wrapper .alert-head h2.alert-title {
@@ -35793,6 +35832,637 @@ page-chat .rightchat .timedate {
   color: #929292;
   left: 4px;
   font-weight: 500;
+}
+
+page-editproduct .back-button {
+  display: none !important;
+}
+
+page-editproduct .content-text h1 {
+  width: 100%;
+  margin-bottom: 7px;
+  text-align: center;
+  color: #ff563f;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+}
+
+page-editproduct .backgroundbanner {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+page-editproduct .content {
+  width: 100%;
+  float: left;
+}
+
+page-editproduct .content-sec {
+  width: 100%;
+  float: left;
+  padding: 0px 30px 50px 30px;
+}
+
+page-editproduct .content-sec .sign {
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+}
+
+page-editproduct .content-sec .sign .form-sec {
+  width: 100%;
+  float: left;
+}
+
+page-editproduct .content-sec .sign .form-sec .list {
+  width: 100%;
+  float: left;
+  margin-bottom: 0px;
+}
+
+page-editproduct .content-sec .sign .form-sec .list .grid {
+  padding: 0px;
+}
+
+page-editproduct .content-sec .sign .form-sec .list .item .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+page-editproduct .content-sec .sign .form-sec .list .item input {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .content-sec .frgtpwd {
+  width: 100%;
+  float: left;
+  padding-top: 12px;
+}
+
+page-editproduct .frgtpwd button {
+  width: 100%;
+  float: left;
+  background-color: #ff563f;
+  font-weight: 500;
+  margin-top: 188px;
+}
+
+page-editproduct .left {
+  padding-left: 0px;
+}
+
+page-editproduct .right {
+  padding-right: 0px;
+  float: left;
+}
+
+page-editproduct .right.gender .item {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+  min-height: 2.9rem;
+}
+
+page-editproduct .right.gender .item .select {
+  padding: 0px !important;
+  width: 100%;
+  float: left;
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+page-editproduct .right.gender .item .select .select-icon {
+  width: 19px;
+}
+
+page-editproduct .right.gender .label {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+page-editproduct .button {
+  float: right;
+  margin-top: 10px;
+  padding-bottom: 0px;
+}
+
+page-editproduct .plusbtn {
+  position: absolute;
+  right: 0;
+}
+
+page-editproduct .plusbtn button {
+  background-color: #ff563f;
+}
+
+page-editproduct .skipbtn {
+  position: absolute;
+  bottom: 17px;
+  left: 120px;
+}
+
+page-editproduct #menu ul {
+  list-style: none;
+}
+
+page-editproduct #menu li {
+  display: inline;
+}
+
+page-editproduct .circle-top {
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+}
+
+page-editproduct .circle-top ul {
+  width: 100%;
+  float: left;
+  list-style-type: none;
+  padding: 0px;
+  text-align: center;
+}
+
+page-editproduct .circle-top li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #6a6a6a !important;
+  display: inline-block;
+  margin: 0px 45px;
+}
+
+page-editproduct .circle-line {
+  width: 71%;
+  height: 2px;
+  background-color: #6a6a6a;
+  position: absolute;
+  top: 21px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 0;
+  margin-top: 63px;
+}
+
+page-editproduct .one-circle {
+  background-color: #ff563f;
+}
+
+page-editproduct .footer .toolbar {
+  padding: 0px;
+}
+
+page-editproduct .footer .toolbar .button {
+  margin: 0px;
+}
+
+page-editproduct .circle-top li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff563f;
+  border: 1px solid #6a6a6a !important;
+  display: inline-block;
+  margin: 0px 45px;
+  position: relative;
+  z-index: 2;
+}
+
+page-editproduct .circle-line {
+  width: 71%;
+  height: 2px;
+  background-color: #6a6a6a;
+  position: absolute;
+  top: 21px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 0;
+  margin-top: 63px;
+  z-index: 1;
+}
+
+page-editproduct .latter {
+  font-size: 12px;
+  color: #6a6a6a;
+  font-weight: 500;
+  font-family: roboto;
+}
+
+page-editproduct .padding {
+  margin-top: 10px;
+  padding: 0px;
+  border: 0px;
+}
+
+page-editproduct .col-sm-4 {
+  width: 65px;
+  height: 60px;
+  margin-left: 0px;
+}
+
+page-editproduct .img {
+  margin-left: 0px;
+  padding: 0px;
+  margin-left: -11px;
+}
+
+page-editproduct .plus .icon.icon-ios.ion-ios-add {
+  width: 30px;
+  height: 30px;
+  font-size: 52px;
+  text-align: center;
+  margin-left: 0px;
+  width: 65px;
+  height: 60px;
+}
+
+page-editproduct .addproduct {
+  width: 100%;
+  float: left;
+  padding-bottom: 20px;
+}
+
+page-editproduct button.fab {
+  -webkit-box-shadow: 0 0 7px #656565;
+  box-shadow: 0 0 7px #656565;
+}
+
+page-editproduct .row {
+  margin-top: 5px;
+}
+
+page-editproduct .why {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+page-editproduct .main {
+  margin-top: 2rem;
+  font-size: 14px;
+  color: #ff563f;
+  font-weight: 700;
+  font-family: roboto;
+}
+
+page-editproduct .maxium {
+  text-align: right;
+  font-size: 12px;
+  color: #6a6a6a;
+  font-weight: 500;
+  width: 100%;
+  float: left;
+}
+
+page-editproduct .content-sec .sign .form-sec .list .item {
+  width: 100%;
+  float: left;
+  padding: 0px;
+  border: none;
+}
+
+page-editproduct .input.text-input.text-input-ios {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .add h2 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+}
+
+page-editproduct #lbl-5 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: roboto;
+}
+
+page-editproduct #lbl-57 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: roboto;
+}
+
+page-editproduct .input.text-input.text-input {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .span {
+  font-size: 9px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-editproduct .item {
+  padding: 0 !important;
+}
+
+page-editproduct .button-inner {
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #a6a6a6;
+}
+
+page-editproduct #lbl-176 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a6a6a6;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: roboto;
+}
+
+page-editproduct input.text-input.text-input-ios {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .label {
+  font-size: 12px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-family: roboto;
+  color: #a6a6a6;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .item-label-stacked .select-ios, page-editproduct .item-label-floating .select {
+  padding-left: 0;
+  padding-top: 0px;
+  padding-bottom: 9px;
+}
+
+page-editproduct .button {
+  border-radius: 4px;
+  height: 2.8em;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #ff563f;
+  margin: 0.4rem 0.2rem;
+  padding: 0 1em;
+  text-align: center;
+  margin-top: 30px;
+  width: 50%;
+}
+
+page-editproduct .left_box .input-sec {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 0 5px #656565;
+  box-shadow: 0 0 5px #656565;
+  overflow: hidden;
+  background-color: #f27242;
+  position: absolute;
+  border-radius: 50%;
+  top: 70px;
+  left: 44px;
+}
+
+page-editproduct .left_box .input-sec .upld {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+page-editproduct .left_box .input-sec input {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  opacity: 0;
+}
+
+page-editproduct .select-text {
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 16px;
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-editproduct .input-sec .icon {
+  height: 57px;
+  width: 100%;
+  line-height: 56px;
+  text-align: center;
+  font-size: 46px;
+  cursor: pointer;
+}
+
+page-editproduct .upld input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 57px;
+  opacity: 0;
+  z-index: 999;
+}
+
+page-editproduct .upld {
+  position: relative;
+  height: 57px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+page-editproduct .footer .toolbar .button {
+  margin: 0px;
+  width: 100%;
+}
+
+page-editproduct .image {
+  width: 100%;
+  float: left;
+  height: 57px;
+}
+
+page-editproduct .fab-md {
+  color: #fff;
+  background-color: #f27242;
+}
+
+page-editproduct .fab {
+  color: #fff;
+  background-color: #f27242;
+}
+
+page-editproduct .image img {
+  width: 100%;
+  border: 0;
+  height: 100%;
+  float: left;
+}
+
+page-editproduct .active {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+page-editproduct .active .select-icon {
+  position: relative;
+  width: 17px;
+  height: 18px;
+}
+
+page-editproduct .datetime-text {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .active .select-text {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-editproduct .button-inner {
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #fff;
+}
+
+page-editproduct textarea.text-input {
+  font-size: 13px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+page-editproduct .toolbar-md {
+  min-height: 0;
+}
+
+page-editproduct .label {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: roboto;
+  color: #a6a6a6;
+  letter-spacing: 1px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+page-editproduct .back-button.show-back-button {
+  z-index: 9999;
+}
+
+page-editproduct r1-tags-input .r1-tags-input .iti-tag-color {
+  background-color: #ff563f;
+  color: white;
+}
+
+page-editproduct [_nghost-c1] {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ff563f;
+  color: white;
+  margin-top: 10px;
+}
+
+page-editproduct .ng2-tag-input-focus[_nghost-c0] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-editproduct [_nghost-c1] .ng2-tag-input-remove[_ngcontent-c1] {
+  font-size: 14px;
+  height: 18px;
+  line-height: 19px;
+  width: 18px;
+  background-color: #ff563f;
+  color: #fff;
+}
+
+page-editproduct [_nghost-c0] {
+  border-bottom: 0.55px solid #c8c7cc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-editproduct [_nghost-c0] .ng2-tag-input-field[_ngcontent-c0] {
+  font-size: 13px;
+  margin-top: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 0px;
+}
+
+ion-alert[role="dialog"] .alert-wrapper .alert-head h2.alert-title {
+  font-size: 16px !important;
 }
 
 page-editprofile .main_box {
@@ -37933,6 +38603,101 @@ page-processingform .bottombutton {
   width: 100%;
   float: left;
   padding-top: 20px;
+}
+
+page-productlist .btnprofile {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+page-productlist .back-button {
+  display: none !important;
+}
+
+page-productlist .content {
+  width: 100%;
+  float: left;
+}
+
+page-productlist .list {
+  width: 100%;
+  float: left;
+}
+
+page-productlist .item {
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #dedede;
+  padding: 0;
+}
+
+page-productlist .item .item-inner {
+  border-bottom: none !important;
+}
+
+page-productlist .item h2 {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: roboto;
+  color: #000000;
+}
+
+page-productlist [padding] h1:first-child, page-productlist [padding] h2:first-child, page-productlist [padding] h3:first-child, page-productlist [padding] h4:first-child, page-productlist [padding] h5:first-child, page-productlist [padding] h6:first-child {
+  margin-top: 0;
+}
+
+page-productlist .item:first-child {
+  border-top: none !important;
+}
+
+page-productlist .item h2 span {
+  float: right;
+  cursor: pointer;
+}
+
+page-productlist .item p {
+  margin: 0 0 2px;
+  overflow: inherit;
+  font-size: 1.4rem;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #666;
+}
+
+page-productlist .item p span {
+  float: right;
+  cursor: pointer;
+}
+
+page-productlist .back-button-icon-md {
+  margin: 0;
+  padding: 0 6px;
+  text-align: left;
+  text-align: start;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+page-productlist .button ion-icon.icon.icon-md.ion-md-arrow-back {
+  padding: 0 10px;
+  margin: 0 6px;
+  height: 28px;
+  color: #fff;
+  /* padding: 0 0 0 3px; */
+  font-size: 2.7rem;
+}
+
+page-productlist ion-header .toolbar-content ion-title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 35px;
+  left: 0;
+  right: 0;
 }
 
 page-profile .main_box {

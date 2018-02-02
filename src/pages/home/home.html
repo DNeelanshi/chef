@@ -73,7 +73,7 @@
 
   <div *ngSwitchCase="'ORDER HISTORY'">
    <ion-list >
-     <h1 class="cancel">TOTAL EARNED <span  style="color:black; font-weight: 700;" class="rightp">$ {{earned}}</span></h1>
+     <h1 class="cancel">TOTAL EARNED <span  style="color:black; font-weight: 700;" class="rightp">${{earned}}</span></h1>
     <ion-item (click)="order2(datts)" *ngFor="let datts of historyorders">
       <ion-thumbnail item-start>
         <img [src]="datts.products[0]?.image">
@@ -83,7 +83,7 @@
      <p>{{datts?.booking_datetime}}</p>
   
     </ion-item>
-<p *ngIf="notavail == 2">No orders yet</p>
+<p *ngIf="notavail2 == 1">No orders yet</p>
    </ion-list>
    <h1 class="cancel">CANCELLED ORDER</h1>
    <ion-list>
@@ -96,7 +96,7 @@
      <p>{{dt?.booking_datetime}}</p>
    
     </ion-item>
-  <p *ngIf="notavail == 1">No orders yet</p>
+  <p *ngIf="notavail3 == 1">No orders yet</p>
   </ion-list>
   </div>
 

@@ -1,14 +1,14 @@
 webpackJsonp([31],{
 
-/***/ 443:
+/***/ 456:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountnumberPageModule", function() { return AccountnumberPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddproductPageModule", function() { return AddproductPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__accountnumber__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addproduct__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AccountnumberPageModule = (function () {
-    function AccountnumberPageModule() {
+var AddproductPageModule = (function () {
+    function AddproductPageModule() {
     }
-    return AccountnumberPageModule;
+    return AddproductPageModule;
 }());
-AccountnumberPageModule = __decorate([
+AddproductPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__accountnumber__["a" /* AccountnumberPage */],
+            __WEBPACK_IMPORTED_MODULE_2__addproduct__["a" /* AddproductPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__accountnumber__["a" /* AccountnumberPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__addproduct__["a" /* AddproductPage */]),
         ],
     })
-], AccountnumberPageModule);
+], AddproductPageModule);
 
-//# sourceMappingURL=accountnumber.module.js.map
+//# sourceMappingURL=addproduct.module.js.map
 
 /***/ })
 

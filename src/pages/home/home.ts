@@ -19,6 +19,7 @@ export class HomePage {
   notavail:any=0;
    notavail1:any=0;
     notavail2:any=0;
+     notavail3:any=0;
   datetime:any;
   earned:any=0;
    users3:any=[];
@@ -314,9 +315,11 @@ this.getInfo2();
     
     console.log(this.historyorders);
     for (var f = 0; f < this.historyorders.length;f++){
+     
         for (var g = 0; g < this.historyorders[f].products.length;g++){
-    this.earned = this.earned + (this.historyorders[f].products[g].quality * this.historyorders[f].products[g].minorder)
-    }}
+    this.earned = this.earned + (this.historyorders[f].products[g].quantity * this.historyorders[f].products[g].minorder)
+    }
+    }
        console.log(this.earned);
   }
    order2(productS){
@@ -344,7 +347,7 @@ this.getInfo2();
          console.log(response2);
       
              if(response2.status == true){
-            this.notavail=0;
+            this.notavail3=0;
            console.log(this.chef.products);
           response2.data.forEach(function(value,key){
               console.log(value);
@@ -376,7 +379,7 @@ this.getInfo2();
 //this.getInfo3();
           
        }else{
-           this.notavail=1;
+           this.notavail3=1;
        }
      })
   }

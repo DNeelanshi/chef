@@ -609,11 +609,43 @@ input.text-input.text-input-ios{
     z-index: 9999;
 }
 
-ion-tags-input .ion-tags-input .iti-tag-color {
+r1-tags-input .r1-tags-input .iti-tag-color {
     background-color: #ff563f;
     color: white;
 }
+[_nghost-c1] {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #ff563f;
+    color: white;
+    margin-top: 10px;
+}
+.ng2-tag-input-focus[_nghost-c0] {
+    box-shadow: none !important;
+}
 
+[_nghost-c1] .ng2-tag-input-remove[_ngcontent-c1] {
+    font-size: 14px;
+    height: 18px;
+    line-height: 19px;
+    width: 18px;
+    background-color: #ff563f;
+    color:#fff;
+}
+[_nghost-c0]{
+    border-bottom: 0.55px solid #c8c7cc;
+    box-shadow: none;
+}
+[_nghost-c0] .ng2-tag-input-field[_ngcontent-c0] {
+    font-size: 13px;
+    margin-top: 0px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 0px;
+}
 
 //   .upld .ion-icon.icon.icon-md.ion-md-add {
 //     text-align: center;

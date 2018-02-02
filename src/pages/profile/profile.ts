@@ -19,6 +19,8 @@ import{ SigninPage}from '../signin/signin';
 import{ EditstaffPage}from '../editstaff/editstaff';
 import{ StafflistPage}from '../stafflist/stafflist';
 
+import{ ProductlistPage}from '../productlist/productlist';
+
 
 
 
@@ -113,7 +115,10 @@ this.http.post(this.appsetting.myGlobalVar + 'userinfo', serialized, options).ma
       toast.present();
     }
   }
-
+editproduc(){
+    console.log('productlist');
+    this.navCtrl.push(ProductlistPage);
+}
  product(){
   this.navCtrl.push(AddproductPage);
 }

@@ -11,9 +11,12 @@ import { NativeGeocoder, NativeGeocoderReverseResult } from '@ionic-native/nativ
 import { Appsetting } from '../../providers/appsetting';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import {RlTagInputModule} from 'angular2-tag-input';
+//import {KeyboardEvent} from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Device } from '@ionic-native/device';
 import { SigninPage } from '../signin/signin';
+//import { ng-tags-input } from '../build/ng-tags-input';
 import { ProfilePage } from '../profile/profile';
 import { ActionSheetController } from 'ionic-angular';
 import {FormGroup,FormBuilder} from '@angular/forms';
@@ -28,8 +31,10 @@ import {FormGroup,FormBuilder} from '@angular/forms';
 @Component({
   selector: 'page-addproduct',
   templateUrl: 'addproduct.html',
+
 })
 export class AddproductPage {
+    
  public data:any = [];
   commision:any;
   arr:any=[];
@@ -47,6 +52,7 @@ export class AddproductPage {
     public http: Http,
     private formBuilder: FormBuilder,
      public taginput: IonTagsInputModule,
+      public tagsinput: RlTagInputModule,
     public actionSheetCtrl: ActionSheetController,
       private camera: Camera,
     private device: Device,
@@ -68,6 +74,14 @@ getcommision(){
          
      })
 }
+//focus(hel,){
+//    console.log(hel);
+//}
+ focus (element) {
+     console.log(element);
+//    console.log(element.srcElement.onkeypress);s
+    
+  };
  commisioncal(){
      var x = (this.commision/100)*this.data.productprice;
      
@@ -77,11 +91,13 @@ getcommision(){
      this.data.chefrecieved = this.data.productprice-this.data.rafahoprice;
  }
 onChange(val){
+    console.log(val)
     console.log(this.tag.toString())
     this.tags = this.tag.toString();
     console.log(this.tags);
   }
   onChanges(vali){
+     console.log(vali)
     console.log(this.tagss.toString())
     this.taggs = this.tagss.toString();
     console.log(this.taggs);
