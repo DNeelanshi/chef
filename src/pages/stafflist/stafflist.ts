@@ -141,8 +141,8 @@ export class StafflistPage {
     method: RequestMethod.Delete
   });
 //    console.log(postdata);
-    var serialized = 'user_id=5a33981e31120335884ecb12&staff_id=5a3398dc31120335884ecb13';
-    console.log(serialized);
+//    var serialized = 'user_id=5a33981e31120335884ecb12&staff_id=5a3398dc31120335884ecb13';
+//    console.log(serialized);
     this.http.request('http://rafao.us-west-2.elasticbeanstalk.com/api/extra_staff/?',options).map(res => res.json()).subscribe(data1 => {
      console.log(data1);
    

@@ -10,7 +10,7 @@
     <button style="height:28px; color: #fff; padding: 0 0 0 3px; font-size: 2.7rem;" start ion-button clear (click)="backtoprofile()"><ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon></button>
     <ion-title>PRODUCT LIST</ion-title>
     <ion-buttons end>
-        <button ion-button icon-only clear class="btnprofile" > <ion-icon name="add" style="font-size: 2.2em;" ></ion-icon></button>
+        <button ion-button icon-only clear class="btnprofile" (click)="addpro()"> <ion-icon name="add" style="font-size: 2.2em;" ></ion-icon></button>
     </ion-buttons>
 <!--    <ion-icon  ios="ios-add" md="md-add"  (click)="add()"></ion-icon>-->
   </ion-toolbar>
@@ -28,7 +28,7 @@
         <h2 > {{dat?.product_name}}<span (click)="editpro(dat)" ><ion-icon name="create"></ion-icon>
 </span></h2>
         <p>Cuisine:{{dat?.cuisine}} </p>
-     <p>Price:${{dat?.product_price}}<span > <ion-icon name="trash"></ion-icon> </span></p>
+     <p>Price:${{dat?.product_price}}<span (click)="ndelete(dat?._id)"> <ion-icon name="trash"></ion-icon> </span></p>
 <!--    <p item-end class="rightp"  (click)="edit(dat)">Edit Info</p>-->
 <!--     <p item-end class="rightp"  >Delete</p>-->
     </ion-item>

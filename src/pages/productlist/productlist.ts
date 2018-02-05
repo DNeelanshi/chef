@@ -5,6 +5,7 @@ import { Http, Headers, RequestOptions, RequestMethod } from '@angular/http';
 import { Appsetting } from '../../providers/appsetting';
 import {EditproductPage} from '../editproduct/editproduct';
 import {ProfilePage} from '../profile/profile';
+import { AddproductPage } from '../addproduct/addproduct';
 /**
  * Generated class for the ProductlistPage page.
  *
@@ -26,6 +27,9 @@ products:any=[];
       public appsetting: Appsetting,
       private toastCtrl:ToastController, public http: Http) {
       this.productlist();
+  }
+  addpro(){
+      this.navCtrl.push(AddproductPage);
   }
 productlist(){
     let headers = new Headers();
@@ -54,7 +58,78 @@ productlist(){
     });
     })
 }
+   ndelete(proid){
+        console.log(proid);
+    let alert = this.alertCtrl.create({
+      title: 'RAFAHO',
+      message: 'Are you sure<br>you want to delete?',
+      buttons: [
+        {
+          text: 'NO',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+            // this.navCtrl.push(RegisterPage)
+          }
+        },
+        {
+          text: 'YES',
+          role: 'submit',
+          handler: () => {
+            console.log('Continue clicked');
+      let headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+//    var options = new RequestOptions({ headers: headers });
+    
+    var userid = JSON.parse(localStorage.getItem('UserInfo'))._id;
+    console.log(userid)
+    var body = {
+      user_id: userid,
+      id: proid
+      
+    };
+    let options = new RequestOptions({ 
+    body: body,
+    method: RequestMethod.Delete
+  });
+    console.log(body);
 
+     var  Loading = this.loadingCtrl.create({
+          spinner: 'bubbles',
+          cssClass: 'loader',
+          dismissOnPageChange: true
+        });
+     
+        Loading.present().then(() => {
+    this.http.request('http://rafao.us-west-2.elasticbeanstalk.com/api/users/removeProduct/?',options).map(res => res.json()).subscribe(data1 => {
+     console.log(data1);
+     Loading.dismiss();
+     if(data1.status==true){
+           this.ToastMsg(data1.message);
+           this.productlist();
+           
+     }
+
+ },(err)=>{
+     this.ToastMsg('Something went wrong');
+     Loading.dismissAll();
+ });
+          });
+          }
+        }
+      ]
+    });
+    alert.present();
+//  
+  }
+     ToastMsg(msg){
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000,
+      position: 'middle'
+    });
+    toast.present();
+  }
     serializeObj(obj) {
     var result = [];
     for (var property in obj)

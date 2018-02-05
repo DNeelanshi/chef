@@ -7,10 +7,12 @@ import { NativeGeocoder, NativeGeocoderReverseResult } from '@ionic-native/nativ
 import { Appsetting } from '../../providers/appsetting';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import {IonTagsInputModule} from "ionic-tags-input";  
 import {RlTagInputModule} from 'angular2-tag-input';
 import 'rxjs/add/operator/map';
 import { Device } from '@ionic-native/device';
 import { ProductlistPage } from '../productlist/productlist';
+import { AddproductPage } from '../addproduct/addproduct';
 import { ActionSheetController } from 'ionic-angular';
 /**
  * Generated class for the EditproductPage page.
@@ -54,6 +56,7 @@ arr:any=[];
   backtopro(){
       this.navCtrl.push(ProductlistPage)
   }
+
 getdata(){
   this.productdetails =JSON.parse(localStorage.getItem('Producttoedit'));
   console.log(this.productdetails);
@@ -67,24 +70,105 @@ getdata(){
   this.srcImage1 = this.productdetails.product_image1}
    if(this.productdetails.product_image2){
   this.srcImage2 = this.productdetails.product_image2}
+  if(this.productdetails.diet_restriction){
+  if(this.productdetails.diet_restriction.startsWith("<")){
+      console.log(this.productdetails.diet_restriction.startsWith("<"))
+      this.productdetails.diet_restriction = this.productdetails.diet_restriction.replace(/<\/?[^>]+(>|$)/g, "");
+  }}
+   if(this.productdetails.product_description.startsWith("<")){
+       console.log(this.productdetails.product_description.startsWith("<"));
+      this.productdetails.product_description = this.productdetails.product_description.replace(/<\/?[^>]+(>|$)/g, "");
+  }
+  if(this.productdetails.cooking_time_at_chef_place){
+      if(this.productdetails.cooking_time_at_chef_place.toString().length < 3){
+          console.log('im')
+          this.productdetails.cooking_time_at_chef_place =this.productdetails.cooking_time_at_chef_place+':00:00';
+      }
+       if(this.productdetails.cooking_time_at_user_home.toString().length< 3){
+           console.log('here')
+          this.productdetails.cooking_time_at_user_home =this.productdetails.cooking_time_at_user_home+':00:00';
+      }
+  }else{
+      this.productdetails.cooking_time_at_user_home = this.productdetails.cocking_time_at_user_home;
+      this.productdetails.cooking_time_at_chef_place = this.productdetails.cocking_time_at_chef_place;
+  }
   this.data.productname=this.productdetails.product_name,
   this.data.productprice=this.productdetails.product_price,
   this.data.discount=this.productdetails.discount,
      
   this.tag = this.str2;
    this.tagss = this.str1; 
-  this.data.productdesc=this.productdetails.product_description.replace(/<\/?[^>]+(>|$)/g, ""),
-  this.data.diet=this.productdetails.diet_restriction.replace(/<\/?[^>]+(>|$)/g, ""),
+  this.data.productdesc=this.productdetails.product_description,
+  this.data.diet=this.productdetails.diet_restriction,
   this.data.minorder=this.productdetails.minimum_order,
-  this.data.cookingatchef=this.productdetails.cooking_time_at_chef_place+':00:00T',
-  this.data.cookingatclient=this.productdetails.cooking_time_at_user_home+':00:00T',
+  this.data.cookingatchef=this.productdetails.cooking_time_at_chef_place,
+  this.data.cookingatclient=this.productdetails.cooking_time_at_user_home,
   this.srcImage = this.productdetails.product_image0
   }
  EditProduct(product){
      let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
     let options = new RequestOptions({ headers: headers });
+    console.log(this.srcImage);
+        var postdata = {
+product_image0:this.srcImage,
+product_image2:'',
+product_image1:'',
+product_id:this.productdetails._id,
+product_name: this.data.productname,
+discount: this.data.discount,
+product_ingredients:this.tagss,
+diet_restriction: this.data.diet,
+product_description:this.data.productdesc,
+cuisine:'Indian',
+minimum_order:this.data.minorder,
+cooking_time_at_chef_place:parseInt(this.data.cookingatchef),
+cooking_time_at_user_home: parseInt(this.data.cookingatclient),
+tags: this.tag,
+product_price:this.data.productprice,
+status:1
+    }
+    console.log(postdata);
+    var serialized = this.serializeObj(postdata);
+    
+    this.http.post(this.appsetting.myGlobalVar + 'users/edit_product_data', serialized, options)
+      .map(res => res.json())
+      .subscribe(data => {
+        console.log(data);
+        if (data.status == true) {
+          // this.loading.dismiss();
+          let toast = this.toastCtrl.create({
+            message: "Product is updated",
+            duration: 3000,
+            position: 'middle'
+          });
+          toast.present();
 
+
+          this.navCtrl.push(ProductlistPage)
+        } else{
+             let toast = this.toastCtrl.create({
+            message: "Product is updated",
+            duration: 3000,
+            position: 'middle'
+          });
+          toast.present();
+
+
+          this.navCtrl.push(ProductlistPage)
+        }
+      })
+ }
+    serializeObj(obj) {
+    var result = [];
+    for (var property in obj)
+      result.push(encodeURIComponent(property) + "=" + encodeURIComponent(obj[property]));
+
+    return result.join("&");
+  }
+ datetime(pro){
+     console.log(pro);
+     
  }
         CameraAction(){
     
@@ -183,6 +267,18 @@ getdata(){
     });
 
     actionsheet.present();
+  }
+  onChange(val){
+    console.log(val)
+//    console.log(this.tag.toString())
+//    this.tag = this.tag.toString();
+//    console.log(this.tag);
+  }
+  onChanges(vali){
+     console.log(vali)
+//    console.log(this.tagss.toString())
+//    this.tagss = this.tagss.toString();
+//    console.log(this.tagss);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditproductPage');

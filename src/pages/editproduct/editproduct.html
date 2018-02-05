@@ -178,7 +178,7 @@
    <ion-col col-12 class="left">
         <ion-item>
           <ion-label stacked>COOKING TIME AT CHEF PLACE</ion-label>
-           <ion-datetime displayFormat="HH:mm:ss" pickerFormat="HH mm ss"  [(ngModel)]="data.cookingatchef" name="cookingatchef" #cookingatchef="ngModel"  required></ion-datetime>
+           <ion-datetime displayFormat="HH:mm:ss" pickerFormat="HH mm ss"  [(ngModel)]="data.cookingatchef" name="cookingatchef" #cookingatchef="ngModel" (click)="datetime(data.cookingatchef)" required></ion-datetime>
           <!--<ion-input type="tel" [(ngModel)]="data.cookingatclient" required name='cookingatclient' #cookingatclient="ngModel" pattern="^(0|[1-9][0-9]*)$" required></ion-input>-->
         </ion-item>
 <!--     <div class="alert alert-danger" color="danger">
